@@ -1,3 +1,9 @@
+// ----------------- Alexandre Goulão -----------------
+// ------------- Fire Extinguishing Robot -------------
+//
+// The robot will run through a determined course, by following the wall to it's right, using an ultrassonic sensor
+// The objective is to find a lit candle and extinguish it's flame
+
 //Motor speed set between 0 and 255
 
 int enA = 2;                      // Velocity Motor A (PIN 2)                                      
@@ -19,10 +25,10 @@ int echoRight = 8;                // The echo PIN of the sensor to the right is 
 int trigMiddle = 11;              // The trig PIN of the middle sensor is connected to PIN 11 on the arduino
 int echoMiddle = 10;              // The echo PIN of the middle sensor is connected to PIN 10 on the arduino
 
-int INA_FAN = 30;                 // Connects the INA pin of the FAN to PIN 31 of the board (moving clockwise)                
-int INB_FAN = 31;                 // Connects the INB pin of the FAN to PIN 30 of the board (moving counter-clockwise)           
+int INA_FAN = 53;                 // Connects the INA pin of the FAN to PIN 31 of the board (moving clockwise)                
+int INB_FAN = 51;                 // Connects the INB pin of the FAN to PIN 30 of the board (moving counter-clockwise)           
 
-int flame_value = analogRead(A6);                   // Initialize the flame value of the sensor by connecting it to PIN analog 6
+int flame_value = analogRead(A14);                   // Initialize the flame value of the sensor by connecting it to PIN analog 6
 
 
 void setup() {
@@ -220,7 +226,7 @@ void loop() {
   {
     while(i == 1)
     {  
-      int flame_value = analogRead(A6);                 // Continuously read the value of the flame
+      int flame_value = analogRead(A14);                 // Continuously read the value of the flame
 
       // If the flame value is greater than 80 it means the flame is still too far away and the robot has to move forward
       if(flame_value > 80)       
