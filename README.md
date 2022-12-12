@@ -1,7 +1,7 @@
 # Fire-Extinguishing-Robot
 My project in the Fire Extinguishing competition. Contains code, diagram of the connections and power supply and some images of the robot.
 
-The mobile robot will run through a determined course, by following the wall to it's right, using an ultrassonic sensor.
+The arduino controlled mobile robot will run through a determined course, by following the wall to it's right, using an ultrassonic sensor.
 The objective is to find a lit candle and extinguish it's flame.
 
 In the next image you can an image of the mobile robot.
